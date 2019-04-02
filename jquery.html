@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="jqu.css">
+</head>
+<body>
+    <h1 class="one">About</h1>
+    <h1 class="two">About</h1>
+    <h1 class="third">About</h1>
+    <button class="button">change color</button>
+    <button class="button2">hide</button>
+    <button class="button3">saga apar</button>
+    <button class="button4">asagi apar</button>
+    <div class="birinci"></div>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+    $('h1').css({
+        'background':'green',
+        'color':'red'
+    })
+    $('.two').click(function(){
+   $(this).fadeOut(3000)
+    })
+    $('.one').css({
+        'background':'yellow',
+        'color':'blue'
+    })
+    $('.button').click(function(){
+       $('.third').css({
+           'background':'orange',
+           'color':'red'
+       })
+    })
+   $('.button2').click(function(){
+       $('.one').fadeOut(3000)
+   })
+   $(function(){
+    $('.birinci').draggable()
+   })
+   $('.button3').click(function(){
+       $('.birinci').css({
+       'position':'relative',
+       'left':'60%',
+       'transition':'2s ease'
+   })
+})
+$('.button4').click(function(){
+       $('.birinci').css({
+       'position':'relative',
+       'top':'350px',
+       'transition':'2s ease'
+   })
+})
+    </script>
+</body>
+</html>
